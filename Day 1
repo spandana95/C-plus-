@@ -1,0 +1,30 @@
+Printing numbers from 1 to 10
+
+Sol:
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int x;
+   cin >>x;
+    for (x=1;x<=10;x++)
+	cout<<"\n " << x;
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+Swapping of two numbers using two variables.
+
+Sol:
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int x,y;
+   cin >>x>>y;
+
+	cout<<"Before swapping x="<<x<<"\ny="<<y;
+	 x = (x + y - (y = x));
+	 cout<<"\nAfter swapping x="<<x<<"\ny="<<y;
+}
+-------------------------------------------------------------------------------------------------------------------------------------------
