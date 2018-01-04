@@ -68,7 +68,7 @@ class Employee
   return 0;
  }
 ---------------------------------------------------------------------------------------------------------------------------------------
-Write aprogram using constructors with parameters and without parameters.
+Write a program using constructors with parameters and without parameters.
 
 Sol:
 #include<iostream>
