@@ -1,4 +1,4 @@
-Write a program using Constructor.
+Write a program using Constructor(Variable is public).
 
 Sol:
 #include <iostream>
@@ -34,4 +34,136 @@ int main(void)
     e2.display();
     return 0;
 }
-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+Write a program using Constructor(Variable is private and function is public)
+
+Sol:
+#include<iostream>
+class Employee
+{
+  private:
+  int id;
+  char name[12];
+  float salary;
+
+  public:
+  void insert(int i , char n[], float s)
+  {
+    id = i;
+   name = n;
+    salary = s;
+  }
+  public:
+  void display()
+  {
+   cout <<id<<" "<<name<<" "<<salary<<endl;
+  }
+ };
+ 
+ int main()
+ {
+  Employee e1;
+  e1.insert(46,"Karna",99000.00);
+  e1.display();
+  return 0;
+ }
+---------------------------------------------------------------------------------------------------------------------------------------
+Write aprogram using constructors with parameters and without parameters.
+
+Sol:
+#include<iostream>
+
+class Employee
+{
+  public:
+  int id;
+  char name[12];
+  float salary;
+  float tax;
+
+  Employee()
+  {
+   cout<<"Non-parameterized consturctor"<<endl;
+   id = 1001;
+   name = "Karna";
+   salary = 99000.50;
+  }
+
+  Employee(int i , char j[], float k)
+  {
+   cout<<"Parameterized constructor"<<endl;
+   id = i;
+   name = j;
+   salary = k;
+  }
+  //User-defined Function
+  caltax()
+  {
+    tax = salary*0.2;
+    cout<<"Tax Amount: "<<tax<<endl;
+  }
+  //User-defined Function
+  netsalary()
+  {
+   cout << "Net Salary:"<<salary-tax<<endl;
+  }
+  //USER-DEFINED FUNCTION
+  display()
+  {
+   cout<<"ID:"<<id<<" NAME:"<<name<<" SALARY:"<<salary<<endl;
+  }
+};
+
+int main()
+{
+ Employee e1;
+ Employee e2 = Employee(46,"Karna",99500) ;
+ e1.display();
+ e2.display();
+ e1.caltax();
+ e1.netsalary();
+ e2.caltax();
+ e2.netsalary();
+ return 0;
+}
+---------------------------------------------------------------------------------------------------------------------------------------
+Write a example using Inheritance concept.
+
+Sol:
+#include <iostream>
+ 
+using namespace std;
+
+// Base class
+class Shape {
+   public:
+      void setWidth(int w) {
+         width = w;
+      }
+      void setHeight(int h) {
+         height = h;
+      }
+      
+   protected:
+      int width;
+      int height;
+};
+
+// Derived class
+class Rectangle: public Shape {
+   public:
+      int getArea() { 
+         return (width * height); 
+      }
+};
+
+int main(void) {
+   Rectangle Rect;
+ 
+   Rect.setWidth(5);
+   Rect.setHeight(7);
+   cout << "Total area: " << Rect.getArea() << endl;
+
+   return 0;
+}
+---------------------------------------------------------------------------------------------------------------------------------------
