@@ -127,7 +127,7 @@ int main()
  return 0;
 }
 ---------------------------------------------------------------------------------------------------------------------------------------
-Write a example using Inheritance concept.
+Write a program using Inheritance concept.
 
 Sol:
 #include <iostream>
