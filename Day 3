@@ -127,7 +127,7 @@ int main()
  return 0;
 }
 ---------------------------------------------------------------------------------------------------------------------------------------
-Write a program using Inheritance concept.
+Write a program using single-inheritance concept.
 
 Sol:
 #include <iostream>
@@ -165,5 +165,76 @@ int main(void) {
    cout << "Total area: " << Rect.getArea() << endl;
 
    return 0;
+}
+---------------------------------------------------------------------------------------------------------------------------------------
+Write a program using multilevel-inheritance concept.
+
+Sol:
+#include <iostream>
+using namespace std;
+
+class A
+{
+    public:
+      void display()
+      {
+          cout<<"You are in base class.";
+      }
+};
+
+class B : public A
+{
+
+};
+
+class C : public B
+{
+ 
+};
+
+int main()
+{
+    C obj;
+    obj.display();
+    return 0;
+}
+---------------------------------------------------------------------------------------------------------------------------------------
+Write a program using multiple-inheritance concept.
+
+
+Sol:
+#include <iostream>
+using namespace std;
+
+class A
+{
+    public:
+      void display()
+      {
+          cout<<"You are in base class."<<endl;
+      }
+};
+
+class B 
+{
+    public:
+      void display()
+      {
+          cout<<"You are in base class-2.";
+      }
+
+};
+
+class C : public A, public B
+{
+ 
+};
+
+int main()
+{
+    C obj;
+    obj.A :: display();
+    obj.B :: display();
+    return 0;
 }
 ---------------------------------------------------------------------------------------------------------------------------------------
