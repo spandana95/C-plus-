@@ -1,0 +1,150 @@
+Exceptional handling
+
+Sol:
+#include <iostream>
+
+using namespace std;
+
+float division(int x, int y)
+{
+    return (x/y);
+}
+
+int main() {
+	int i=50;
+	int j=0;
+	float k=0;
+	k = division(i,j);
+
+	cout<<k<< endl;
+	return 0;
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+Try and Catch problem.
+
+Sol:
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a;
+    cout<<"Enter a number";
+    cin>>a;
+    try
+    {
+        if(a<500)
+        throw 't';
+        else
+        throw 'e';
+    }
+    catch (int t)
+    {
+        cout<<"Exceptional error";
+    }
+    catch (int e)
+    {
+        cout<<"Global Error";
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+Virtual class.
+
+Sol:
+#include <iostream>
+using namespace std;
+
+class A
+{
+    public:
+      void display()
+      {
+          cout<<"You are in base class."<<endl;
+      }
+};
+
+class B : public virtual A 
+{
+    
+};
+
+class C : public virtual A 
+{
+    
+};
+
+class D : public B, public C
+{
+ 
+};
+
+int main()
+{
+    D obj;
+    obj.display();
+    
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+Virtual function.
+
+Sol:
+#include <iostream>
+
+using namespace std;
+
+class shape
+{
+    public:
+    virtual void draw()=0;
+};
+
+class rectangle :  shape
+{
+    public:
+    void draw()
+    {
+        cout<<"Drawing rectangle."<<endl;
+    }
+};
+
+class circle :  shape
+{
+    public:
+    void draw()
+    {
+        cout<<"Drawing circle."<<endl;
+    }
+};
+
+int main() {
+    rectangle rec;
+    circle cir;
+    rec.draw();
+    cir.draw();
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+Program using Template.
+
+Sol:
+#include <iostream>
+using namespace std;
+template <class Q>
+Q Add ( Q x, Q y) {
+    Q result;
+    result = x+y;
+    return (result);
+}
+int main () {
+    int a,b,c;
+    cin>>a>>b;
+    c=Add(a,b);
+    cout<<c;
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+Pass an array as a parameter to function.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Friend function.
